@@ -6,41 +6,42 @@ authors: ["DF27ARTS"]
 
 ---
 
-## Explorando los Diccionarios en Python
+## Exploring Python Dictionaries
 
-Los diccionarios en [Python](https://4geeks.com/es/lesson/como-programar-en-python) son una estructura de datos que nos permite almacenar grandes cantidades de datos y acceder a ellos de una forma muy eficiente. En este artículo aprenderás cómo crear, acceder y modificar datos en un diccionario de Python, en el siguiente ejemplo veremos una pequeña demostración de cómo puedes utilizar un diccionario para guardar una colección de datos.
+Dictionaries in [Python](https://4geeks.com/es/lesson/como-programar-en-python) are a data structure that allows us to store large amounts of data and access them in a very efficient way. In this article you will learn how to create, access and modify data in a Python dictionary, in the following example we will see a small demonstration of how you can use a dictionary to store a collection of data.
 
 ```py
-ciudad = {
-    #Clave            Valor
-    "ciudad_id":      1,
-    "nombre_ciudad":  "New York",
-    "población":      8.468,
-    "moneda":         "dollar"
+city = {
+    #Key Value
+    "city_id": 1,
+    "city_name": "New York",
+    "population": 8,468,
+    "currency": "dollar"
 }
 
-ciudad["ciudad_id"] = 1000  # Reemplazar datos dentro del diccionario
-ciudad["nombre_ciudad"] = ciudad["nombre_ciudad"].upper()  # Modificar datos dentro del diccionario
-del ciudad["moneda"]  # Eliminar datos dentro del diccionario
+city["city_id"] = 1000 # Replace data within the dictionary.
+city["city_name"] = city["city_name"].upper() # Modify data inside the dictionary
+from city["currency"] # Delete data within the dictionary
 
-print(ciudad)
+print(city)
 ```
-> output ciudad: 
+> output city: 
+
 ```bash
 {
-    'ciudad_id': 1000, 
-    'nombre_ciudad': 'NEW YORK', 
-    'población': 8.468
+    'city_id': 1000, 
+    'city_name': 'NEW YORK', 
+    'population': 8,468
 }
 ```
 
-En este ejemplo, creamos un diccionario con datos para representar una ciudad, en el ejemplo accedemos a la propiedad `ciudad_id` y le reemplazamos su valor original **50** con un nuevo valor **1000**, también modificamos la propiedad `nombre_ciudad` con el mismo valor pero en mayúsculas **NEW YORK** y por último eliminamos la propiedad `moneda` del diccionario. En este código se ven los ejemplos más básicos sobre cómo acceder a una propiedad, como modificar datos y cómo eliminar propiedades en diccionario.
+In this example, we create a dictionary with data to represent a city, in the example we access to the property `city_id` and we replace its original value **50** with a new value **1000**, also we modify the property `city_name` with the same value but in capital letters **NEW YORK** and finally we eliminate the property `currency` of the dictionary. In this code we can see the most basic examples on how to access to a property, how to modify data and how to delete properties in dictionary.
 
-## What is a Python dictionary?
+## ¿Qué es un diccionario en Python?
 
-A Python dictionary is a data structure where you can store information in an organized way. Think of it as a real dictionary, but instead of finding definitions of words, you will have values associated with unique keys! Each element of the dictionary is a key-value pair, where the key is unique and allows us to access its corresponding value. This way we can quickly find what we need.
+Un diccionario en Python es una estructura de datos donde puedes almacenar información de forma organizada. Piénsalo como un verdadero diccionario, pero en lugar de encontrar definiciones de palabras, ¡tendrás valores asociados a claves únicas! Cada elemento del diccionario es un par clave-valor, donde la clave es única y nos permite acceder a su valor correspondiente. Así podemos encontrar rápidamente lo que necesitamos.
 
-The following video shows better how dictionaries work in Python, how to access their properties, how to update their values and many more.
+En el siguiente video se muestra mejor cómo funcionan los diccionarios en Python, cómo acceder a sus propiedades, cómo actualizar sus valores y muchas cosas más.
 
 <iframe 
     width="650" 
@@ -51,89 +52,65 @@ The following video shows better how dictionaries work in Python, how to access 
     allowfullscreen>
 </iframe>
 
-## How to declare a dictionary?
+## ¿Cómo declarar un diccionario?
 
-To declare a dictionary in Python you can do it in two ways, the first one is to create a variable and assign it as value a pair of braces `{}` this will create a dictionary by default, another way to declare a dictionary is to create a variable and assign it as value the `dict()` constructor, in the following examples you will see a little better how it works.
+Para declarar un diccionario en Python puedes hacerlo de dos formas, la primera es crear una variable y asignarle como valor un par de llaves `{}` esto creará un diccionario por defecto, otra forma de declarar un diccionario es crear una variable y asignarle como valor el constructor `dict()`, en los siguientes ejemplos verás un poco mejor cómo funciona.
 
 ```py
-object_one = {
-    "key_one": "object one value one",
-    "```key_two'': ``object one value two'',
+objeto_uno = {
+    "clave_uno": "objeto uno valor uno",
+    "clave_dos": "objeto uno valor dos",
 }
 
-object_two = dict(
-    key_one = "object two value one",
-    key_two = "object two value two",
+objeto_dos = dict(
+    clave_uno = "objeto dos valor uno",
+    clave_dos = "objeto dos valor dos",
 )
 
-print(object_one)
-print(object_two)
+print(objeto_uno)
+print(objeto_dos)
 ```
 > output:
-
 ```bash
 {
-    'key_one': 'object one value one', 
-    'key_two': 'object one value two', 'key_two': 'object one value two'.
+    'clave_uno': 'objeto uno valor uno', 
+    'clave_dos': 'objeto uno valor dos'
 }
 {
-    'key_one': 'object two value one', 
-    'key_two': 'object two value two' }
+    'clave_uno': 'objeto dos valor uno', 
+    'clave_dos': 'objeto dos valor dos'
 }
 ```
 
-As you can see, creating a dictionary in Python is very simple, first you create a variable and assign it a pair of keys `{}`, then inside the keys we create a key and to this key we assign a value, for example: `{ "academy": "4Geeks" }`.
+Como puedes ver, crear un diccionario en Python es muy sencillo, primero creas una variable y le asignas un par de llaves `{}`, luego dentro de las llaves creamos una clave y a esta clave le asignamos un valor, por ejemplo: `{ "academia": "4Geeks" }`.
 
-> Although it is possible to declare a dictionary with the `dict()` constructor, I recommend that you use the `{}` braces as it is considered good practice and makes the code easier to read.uyhbbk
+> Aunque es posible declarar un diccionario con el constructor `dict()`, te recomiendo que utilices las llaves `{}` ya que se considera una buena práctica y hace el código más sencillo de leer.
+
 ## ¡Accediendo a los datos!
 
-To access the data inside a dictionary use the syntax `dictionary_name[key]`, or you can also use the `get()` method with the following syntax `dictionary_name.get(key)` as shown in the following example:
+Para acceder a los datos adentro un diccionario usa la sintaxis `nombre_diccionario[clave]`, o también puedes usar el método `get()` con la siguiente sintaxis `nombre_diccionario.get(clave)` como se muestra en el siguiente ejemplo:
 
 ```py
-person = {
-    "``name``: ``Axel``,
-    "age": `32,
+persona = {
+    "nombre": "Axel",
+    "edad": 32,
     "email": "axel@mail.com",
-    "phone": "(123) 456-7890"
+    "teléfono": "(123) 456-7890"
 }
 
-print(person["name"]) # output: Axel
-print(person["age"]) # output: 32
+print(persona["nombre"])  # output:  Axel
+print(persona["edad"])    # output:  32
 
-print(person.get("email")) # output: axel@mail.com
-print(person.get("phone")) # output: (123) 456-7890
+print(persona.get("email"))     # output:  axel@mail.com
+print(persona.get("teléfono"))  # output:  (123) 456-7890
 
-print(persona["peso"]) # output: Throws an error (KeyError: 'peso') and stops execution because the key (peso) does not exist in the object persona
-print(persona.get("peso")) # output: Although the key (weight) does not exist in the object persona the method get() does not stop the execution and returns: None
+print(persona["peso"])      # output:  Arroja un error (KeyError: 'peso') y detiene la ejecución porque la clave (peso) no existe en el objeto persona
+print(persona.get("peso"))  # output:  Aunque la clave (peso) no existe en el objeto persona el método get() no detiene la ejecución y retorna: None
 ```
 
-As shown in this example, to access the value of a dictionary you can use the square brackets and inside the brackets the name of the key of that value `variable[key]` or you can also use the `get()` method and pass as parameter the name of the key that contains the value `variable.get(key)`. 
+Como se muestra en este ejemplo, para acceder al valor de la un diccionario puedes usar los corchetes y dentro de los corchetes el nombre de la clave de ese valor `variable[clave]` o también puedes usar el método `get()` y le pasas como parámetro el nombre de la clave que contiene es valor `variable.get(clave)`. 
 
-> It is important to note that if you try to access the key of a dictionary that does not contain that key using the square brackets you will get a `KeyError` and it will stop the execution of the code while if you use the `get()` method it does not stop the execution of the code and returns the value `None`.
-
-To access the data inside a dictionary use the syntax `dictionary_name[key]`, or you can also use the `get()` method with the following syntax `dictionary_name.get(key)` as shown in the following example:
-
-```py
-person = {
-    "``name``: ``Axel``,
-    "age": `32,
-    "email": "axel@mail.com",
-    "phone": "(123) 456-7890"
-}
-
-print(person["name"]) # output: Axel
-print(person["age"]) # output: 32
-
-print(person.get("email")) # output: axel@mail.com
-print(person.get("phone")) # output: (123) 456-7890
-
-print(persona["peso"]) # output: Throws an error (KeyError: 'peso') and stops execution because the key (peso) does not exist in the object persona
-print(persona.get("peso")) # output: Although the key (weight) does not exist in the object persona the method get() does not stop the execution and returns: None
-```
-
-As shown in this example, to access the value of a dictionary you can use the square brackets and inside the brackets the name of the key of that value ``variable[key]` or you can also use the `get()` method and pass as parameter the name of the key that contains the value ``variable.get(key)`. 
-
-> It is important to note that if you try to access the key of a dictionary that does not contain that key using the square brackets you will get a `KeyError` and it will stop the execution of the code while if you use the `get()` method it does not stop the execution of the code and returns the value `None`.
+> Es importante resaltar que si tratas de acceder a la clave de un diccionario que no contiene esa clave usando los corchetes te va a arrojar un error de tipo `KeyError` y va a detener la ejecución del código mientra que si usas el metodo `get()` este no detiene la ejecución del código y te retorna el valor `None`.
 
 ## ¡Añadiendo nuevos datos! 
 
